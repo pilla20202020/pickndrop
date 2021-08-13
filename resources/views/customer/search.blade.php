@@ -3,7 +3,7 @@
 @section('title', 'Dashboard')
 
 @section('content_header')
-<h1>Customers</h1>
+<h1>Enter Latitude and Longitude </h1>
 @stop
 
 @section('content')
@@ -66,7 +66,7 @@
         }else{
             $(".sort-datatable").dataTable().fnDestroy();
         }
-            
+
         $('.sort-datatable').DataTable({
             "processing": true,
             "serverSide": true,

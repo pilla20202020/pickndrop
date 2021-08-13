@@ -3,17 +3,20 @@
 @section('title', 'Dashboard')
 
 @section('content_header')
-<h1>Customers</h1>
+<div class="row">
+    <h1>Customers</h1>
+    <div class="ml-auto">
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#createCustomerModal">
+            + Customers
+        </button>
+    </div>
+</div>
 @stop
 
 @section('content')
 <!-- <p>Welcome to this beautiful admin panel.</p> -->
 
-<div class="col-sm-3 offset-sm-10">
-    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#createCustomerModal">
-        + Customers
-    </button>
-</div>
+
 
 <div class="container">
     <table class="table table-bordered yajra-datatable">
@@ -355,7 +358,7 @@
                     $('#createCustomerModal').modal('show');
             },
             error: function(errors) {
-            
+
             }
         });
     })
